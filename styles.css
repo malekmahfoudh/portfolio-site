@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background-color: #252525;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+button {
+    all: unset;
+    background-image: url(/img/can-we-add-screaming-sun-to-the-sub-screaming-sun-rick-and-morty-11563649008ybad8mi9fd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+li {
+    all: unset;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    background-color: rgba(245, 245, 220, 0.743);
+    display: flex;
+    justify-content: space-between;
+}
