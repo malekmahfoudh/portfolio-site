@@ -2,50 +2,113 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --primary-color: #22577E;
+    --secondary-color-1: #5584AC;
+    --secondary-color-2: #95D1CC;
+    --accent-color: #F6F2D4;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
-    background-color: #252525;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-button {
-    all: unset;
-    background-image: url(/img/can-we-add-screaming-sun-to-the-sub-screaming-sun-rick-and-morty-11563649008ybad8mi9fd.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-li {
-    all: unset;
-}
-
-
-.main-container {
+    margin: 0;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
     display: flex;
     flex-direction: column;
 }
 
-.about {
-    background-color: rgba(245, 245, 220, 0.743);
+header {
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h4 {
+    margin-top: 0;
+}
+
+header + .main-container {
+    padding-top: 20em;
+}
+
+button {
+    all: unset;
+    background-image: url(/img/8F4CB92A-80B3-4C2E-9028-C4F3421386F3_1_105_c.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.main-container {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.introduction {
+    background-color: var(--secondary-color-1);
     display: flex;
     justify-content: space-between;
+    padding: 2em;
+    line-height: 1.7em;
+}
+
+
+.introduction-text {
+    display: flex;
+    gap: 2em;
+}
+
+.introduction-text p {
+    font-weight: 400;
+}
+
+.about {
+    background-color: var(--secondary-color-2);
+    width: 70%;
+    margin-left: auto;
+    margin-top: 3rem;
+    color: var(--primary-color);
+    padding: 2em;
+    line-height: 1.7em;
+}
+
+.about p {
+    font-weight: 400;
+}
+
+.skills {
+    background-color: var(--secondary-color-1);
+}
+
+.projects-title {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects-container {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+}
+
+
+
+.projects-container img {
+    width: 30%;
+    padding-left: 2rem;
 }
