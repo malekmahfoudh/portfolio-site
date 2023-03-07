@@ -9,106 +9,78 @@
     --accent-color: #F6F2D4;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 body {
     margin: 0;
     background-color: var(--primary-color);
     color: var(--accent-color);
     font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font-weight:lighter;
     display: flex;
     flex-direction: column;
 }
 
-header {
-    background-color: var(--primary-color);
-    position: fixed;
-    width: 100%;
+.hero-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5rem auto;
 }
 
-header h4 {
-    margin-top: 0;
+#first-name, #last-name {
+    font-weight: lighter;
+    font-size: 125px;
+    color: var(--secondary-color-2);
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-header + .main-container {
-    padding-top: 20em;
+#first-name {
+    letter-spacing: 4rem;
+    margin-left: 3rem;
+}
+
+#first-name span {
+    color: var(--accent-color);
+}
+
+.title {
+    background-color: var(--secondary-color-2);
+    color: var(--primary-color);
+    padding: 0 7rem;
+    border-radius: 100px;
+    letter-spacing: .5rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    color: var(--accent-color);
 }
 
 button {
     all: unset;
-    background-image: url(/img/8F4CB92A-80B3-4C2E-9028-C4F3421386F3_1_105_c.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    margin-top: 2rem;
-}
-
-.main-container {
-
-    display: flex;
-    flex-direction: column;
-}
-
-.introduction {
-    background-color: var(--secondary-color-1);
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-    line-height: 1.7em;
-}
-
-
-.introduction-text {
-    display: flex;
-    gap: 2em;
-}
-
-.introduction-text p {
-    font-weight: 400;
-}
-
-.about {
-    background-color: var(--secondary-color-2);
-    width: 70%;
-    margin-left: auto;
-    margin-top: 3rem;
-    color: var(--primary-color);
-    padding: 2em;
-    line-height: 1.7em;
-}
-
-.about p {
-    font-weight: 400;
-}
-
-.skills {
-    background-color: var(--secondary-color-1);
-}
-
-.projects-title {
+    margin-bottom: 1rem;
+    padding: 1.5rem 0;
+    transition: all .5s ease-in-out;
+    width: 100vw;
+    margin: 0 auto;
+    align-self: center;
     text-align: center;
-    margin-top: 3rem;
+
 }
 
-.projects-container {
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--accent-color);
-}
-
-
-
-.projects-container img {
-    width: 30%;
-    padding-left: 2rem;
+button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color-1);
+    /* color: var(--primary-color); */
+    /* border-radius: 100px; */
 }
