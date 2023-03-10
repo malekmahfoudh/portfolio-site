@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -19,7 +20,27 @@ body {
     font-weight:lighter;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primary-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .hero-container {
     display: flex;
@@ -28,6 +49,8 @@ body {
     align-items: center;
     margin: 5rem auto;
 }
+
+  
 
 #first-name, #last-name {
     font-weight: lighter;
@@ -68,11 +91,10 @@ body {
 
 button {
     all: unset;
-    margin-bottom: 1rem;
+
     padding: 1.5rem 0;
     transition: all .5s ease-in-out;
-    width: 100vw;
-    margin: 0 auto;
+    width: 100%;
     align-self: center;
     text-align: center;
 
@@ -81,6 +103,137 @@ button {
 button:hover {
     cursor: pointer;
     background-color: var(--secondary-color-1);
-    /* color: var(--primary-color); */
-    /* border-radius: 100px; */
+}
+
+/* ------ ABOUT STYLING ------ */
+
+.about-container {
+    background-color: var(--accent-color);
+    height:min-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.5rem;
+    padding: 10rem 0;
+    justify-content: space-evenly;
+    display: none;
+    
+}
+
+.quote {
+    font-weight: bold;
+}
+
+.about-container__info {
+    font-size: 16px;
+    letter-spacing: normal;
+    color: var(--primary-color);
+    min-width: 30rem;
+    grid-column: 2;
+
+}
+
+.malek-img {
+    max-height: 18rem;
+}
+
+.about-container__facts {
+    font-size: 16px;
+    letter-spacing: normal;
+    color: var(--primary-color);
+    min-width: 30rem;
+    padding-right: 2rem;
+}
+
+/* ------ PORFOLIO STYLING ------ */
+
+.portfolio-container {
+    background-color: var(--accent-color);
+    height:min-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 30rem);
+    gap: 2rem;
+    padding: 10rem 0;
+    display: none;
+    justify-content: space-evenly;
+}
+
+.project-info {
+    color: var(--primary-color);
+    font-size: 1rem;
+    letter-spacing: normal;
+}
+
+.portfolio-project__one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+}
+
+.portfolio-project__two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 4;
+}
+
+.project-img {
+    width: 100%;
+    
+}
+
+.language-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.language {
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    width: fit-content;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    min-width: 5rem;
+    text-align: center;
+}
+
+/* ------ CONTACT STYLING ------ */
+
+.contact-container {
+    background-color: var(--accent-color);
+    height:min-content;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8rem 0;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 5rem;
+    display: none;
+
+}
+
+.contact-container a {
+    width: 80px ;
+}
+
+.icon {
+    width: 100%;
+    filter: invert(34%) sepia(7%) saturate(4203%) hue-rotate(163deg) brightness(90%) contrast(99%);;
+
+}
+
+.watermark {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
