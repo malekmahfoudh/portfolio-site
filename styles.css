@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -16,7 +16,6 @@ body {
     margin: 0;
     background-color: var(--primary-color);
     color: var(--accent-color);
-    font-family: 'Montserrat', sans-serif;
     font-weight:lighter;
     display: flex;
     flex-direction: column;
@@ -83,7 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 400;
     letter-spacing: 1rem;
     color: var(--accent-color);
@@ -105,19 +104,25 @@ button:hover {
     background-color: var(--secondary-color-1);
 }
 
+/* ACTIVE STATE */
+.about-container.active,
+.portfolio-container.active,
+.contact-container.active {
+   display: grid;
+}
+
 /* ------ ABOUT STYLING ------ */
 
 .about-container {
     background-color: var(--accent-color);
-    height:min-content;
+    height:100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3.5rem;
-    padding: 10rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2em;
     justify-content: space-evenly;
     display: none;
-    
 }
 
 .quote {
@@ -128,20 +133,23 @@ button:hover {
     font-size: 16px;
     letter-spacing: normal;
     color: var(--primary-color);
-    min-width: 30rem;
-    grid-column: 2;
-
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
 }
-
+.about-container .mid {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 .malek-img {
-    max-height: 18rem;
+    max-height: 5em;
 }
 
 .about-container__facts {
     font-size: 16px;
     letter-spacing: normal;
     color: var(--primary-color);
-    min-width: 30rem;
     padding-right: 2rem;
 }
 
@@ -149,14 +157,13 @@ button:hover {
 
 .portfolio-container {
     background-color: var(--accent-color);
-    height:min-content;
+    height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 30rem);
+    grid-template-columns: 50% 50%;
     gap: 2rem;
-    padding: 10rem 0;
+    padding: 2em;
     display: none;
-    justify-content: space-evenly;
 }
 
 .project-info {
@@ -170,7 +177,6 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-column: 3;
 }
 
 .portfolio-project__two {
@@ -178,17 +184,16 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-column: 4;
 }
 
 .project-img {
-    width: 100%;
-    
+    max-width: 100%;
 }
 
 .language-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 }
@@ -201,7 +206,6 @@ button:hover {
     font-size: 12px;
     letter-spacing: 2px;
     border-radius: 100px;
-    min-width: 5rem;
     text-align: center;
 }
 
@@ -211,24 +215,22 @@ button:hover {
     background-color: var(--accent-color);
     height:min-content;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 8rem 0;
-    align-items: center;
-    margin: 0;
-    margin-bottom: 5rem;
+    display: grid;
+    place-content: center;
+    gap: 2em;
+    padding: 2em;
     display: none;
-
 }
-
-.contact-container a {
-    width: 80px ;
+.contact--links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
 }
 
 .icon {
     width: 100%;
-    filter: invert(34%) sepia(7%) saturate(4203%) hue-rotate(163deg) brightness(90%) contrast(99%);;
-
+    filter: invert(34%) sepia(7%) saturate(4203%) hue-rotate(163deg) brightness(90%) contrast(99%);
 }
 
 .watermark {
@@ -236,4 +238,14 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .about-container,
+    .portfolio-container {
+        grid-template-columns: 100%;
+    }
+    .contact--links {
+        flex-direction: column;
+    }
 }
