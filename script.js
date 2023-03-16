@@ -4,8 +4,22 @@ let contactButton = document.querySelector('#contact-btn');
 let aboutEl = document.querySelector(".about-container");
 let portfolioEl = document.querySelector(".portfolio-container")
 let contactEl = document.querySelector(".contact-container")
+let containers = document.querySelectorAll('.container');
+let buttons = document.querySelectorAll('.btn');
 
-function toggleAboutSection() {
+aboutButton.addEventListener('click', () => {
+    aboutEl.classList.toggle('active');
+})
+
+portfolioButton.addEventListener('click', () => {
+    portfolioEl.classList.toggle('active');
+})
+
+contactButton.addEventListener('click', () => {
+    contactEl.classList.toggle('active');
+})
+
+/* function toggleAboutSection() {
     if(aboutEl.style.display == "grid") {
         aboutEl.style.display = "none";
     } else {
@@ -42,7 +56,7 @@ function toggleContactSection() {
 contactButton.addEventListener('click', () => {
     toggleContactSection()
     console.log('open contact')
-})
+}) */
 
 
 
